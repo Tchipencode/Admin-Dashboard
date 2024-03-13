@@ -1,0 +1,251 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+body, html{
+   height: 100%;
+}
+.container{
+   display: grid;
+   grid-template-areas: "b a"
+                        "b c";
+   grid-template-columns: 1fr 4fr;
+}
+/* Header */
+.header{
+   grid-area: a;
+   background-color: #dbeafe;
+   padding: 20px;
+   display: grid;
+   grid-template-rows: 1fr 1fr;
+   gap: 30px;
+   box-shadow: 5px 1px 1px 1px rgba(0, 0, 0, 0.6);  
+}
+.top-header{
+   display: grid;
+   grid-template-columns: 3fr 1fr;
+}
+.search-bar{
+   display: grid;
+   grid-template-columns: 0fr 5fr;
+   justify-items: end;
+   justify-self: start;
+   align-items: center;
+   gap: 20px;
+}
+#search{
+   width: 550px;
+   height: 25px;
+   border-radius: 30px;
+   border: none;
+   background-color: #c7d2fe;
+   font-size: 1.2rem;
+   padding-left: 20px;
+}
+.profile{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   align-items: center;
+   justify-self: end;
+   font-weight: bold;
+   padding-right: 20px;
+}
+#profile-image{
+   border-radius: 100px;
+}
+.bottom-header{
+   display: grid;
+   grid-template-columns: 2fr 1fr;
+   align-items: center;
+}
+.greeting{
+   display:grid;
+   grid-template-columns: 0fr 2fr;
+   gap: 10px;  
+}
+.greeting p:first-child{
+   font-size: 0.6rem;
+   padding-bottom: 5px;
+}
+.greeting-name{
+   font-weight: bold;
+}
+.nav-button{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   justify-self: end;
+}
+.nav-button button{
+   width: 90px;
+   background-color: #3b82f6;
+   border-radius: 20px;
+   color: white;
+   padding: 8px;
+   border: none;
+   font-size: 1rem;
+   font-weight: bold;
+   margin: 10px;
+}
+
+/* Sidebar */
+.sidebar{
+   grid-area: b;
+   background-color: #3b82f6;
+   color: white;
+   font-size: 1.2rem;
+   font-weight: bold;
+}
+.sidebar-nav{
+   display: grid;
+   grid-template-rows: 0.4fr 2fr 1fr;
+   gap: 40px;
+   padding: 20px;
+}
+.side-logo{
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   align-self: center;
+   font-size: 1.7rem;
+}
+.side-home{
+   display: grid;
+   gap: 15px;
+}
+.side-home div{
+   display: grid;
+   grid-template-columns: 1fr 4fr;
+   align-self: center;
+}
+.side-settings{
+   display: grid;
+   gap: 15px;
+}
+.side-settings div{
+   display: grid;
+   grid-template-columns: 1fr 4fr;
+   align-self: center;
+}
+.sidebar img{
+   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+
+/* Main content */
+.main-content{
+   grid-area: c;
+   background-color: #c7d2fe;
+   display: grid;
+   grid-template-columns: 2.5fr 1fr;
+   gap: 20px;
+   padding: 30px;
+}
+/* Projects side */
+.projects{
+   display: grid;
+   grid-template-rows: 0fr 6fr;
+   align-content: center;
+   gap: 20px;
+}
+.projects-list{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 20px;
+
+}
+.projects-title{
+   font-size: 1.5rem;
+   font-weight: bold;
+}
+.projects-list .card-projects .title{
+   font-size: 1.2rem;
+   font-weight: bold;
+}
+.user-icons{
+   justify-self: right;
+   align-self: baseline;
+   padding-right: 20px;
+
+}
+.projects-content{
+   padding: 20px;
+}
+.card-projects{
+   display: grid;
+   gap: 20px;
+}
+.card-projects{
+   background-color: white;
+   border-radius: 10px;
+   box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
+   border-left: 8px solid #fb923c;
+
+}
+
+.card-announces, .card-trend{
+   background-color: white;
+   border-radius: 10px;
+   box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
+}
+/* Others side */
+.others{
+   grid-column: 2/3;
+   display: grid;
+   gap: 30px;
+   border-radius: 10px;
+}
+/* Announcements */
+.announces{
+   display: grid;
+   grid-template-rows: 0fr 6fr;
+   align-content: center;
+   gap: 20px;
+   align-self: flex-start;
+}
+.announces .title{
+   font-size: 1.5rem;
+   font-weight: bold;
+}
+.card-announces .title{
+   font-size: 1rem;
+   font-weight: bold;
+}
+.card-announces, .card-trend{
+   padding-left: 30px;
+   padding-right: 30px;
+}
+
+.card-announces div{
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+/* Trending */
+.trend{
+   display: grid;
+   gap: 15px;
+}
+.trend .title{
+   font-size: 1.5rem;
+   font-weight: bold;
+}
+.card-trend{
+   display: grid;
+   align-items: flex-start;
+
+}
+.trend-profile{
+   display: grid;
+   grid-template-columns: 1fr 4fr;
+   align-items: center;
+   padding-top: 10px;
+   padding-bottom: 10px;
+}
+.name{
+   font-size: 0.8rem;
+   font-weight: bold;
+}
+.description{
+   font-size: 0.8rem;
+   color: gray;
+}
+.trend-profile img{
+   border-radius: 100px;
+}
